@@ -1,4 +1,4 @@
-# Flashcards
+# Investment calculator
 
 ## Table of contents
 * [General info](#general-info)
