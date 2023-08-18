@@ -1,4 +1,14 @@
+import { useState } from "react";
+
+const initialUserInput = {
+    'current-savings': 10000,
+    'yearly-contribution': 1200,
+    'expected-return': 7,
+    duration: 10
+};
+
 const UserInput = () => {
+    const[userInput, setUserInput] = useState(initialUserInput);
 
     const submitHandler = (event) => {
         event.preventDefault();
@@ -7,13 +17,17 @@ const UserInput = () => {
     };
 
     const resetHandler = () => {
-        console.log('RESET');
+        setUserInput(initialUserInput);
     }
 
     const inputChangeHandler = (input, value) => {
-        console.log(input, value);
-    }
-
+        setUserInput((prevInput) => {
+            return {
+                ...prevInput,
+                [input]: value,
+            };
+        });
+    };
     return (
         <form onSubmit={submitHandler} className="form">
         <div className="input-group">
@@ -22,7 +36,8 @@ const UserInput = () => {
             <input 
                 onChange={(event) => 
                     inputChangeHandler('current-savings', event.target.value)
-                } 
+                }
+                value={userInput['current-savings']} 
                 type="number" 
                 id="current-savings" 
             />
@@ -32,7 +47,8 @@ const UserInput = () => {
             <input 
                 onChange={(event) => 
                     inputChangeHandler('yearly-contribution', event.target.value)
-                } 
+                }
+                value={userInput['yearly-contribution']}  
                 type="number"
                 id="yearly-contribution" 
             />
@@ -47,6 +63,7 @@ const UserInput = () => {
                 onChange={(event) => 
                     inputChangeHandler('expected-return', event.target.value)
                 } 
+                value={userInput['expected-return']}  
                 type="number" 
                 id="expected-return" 
             />
@@ -57,6 +74,7 @@ const UserInput = () => {
                 onChange={(event) => 
                     inputChangeHandler('duration', event.target.value)
                 }
+                value={userInput.duration}  
                 type="number"
                 id="duration"
             />

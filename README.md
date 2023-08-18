@@ -18,6 +18,12 @@ A web application, built with React according to "React - The Complete Guide 202
 
 Dive in and learn React.js from scratch! Learn React, Hooks, Redux, React Router, Next.js, Best Practices and way more! [React - The Complete Guide 2023 (incl. React Router & Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux/)
 
+The tasks: 
+
+1. Split the App Into components
+2. Handle Submit & Reset Button Click Events
+3. Manage State
+
 ## Screenhot <a id="screenshot"></a>
 
 
