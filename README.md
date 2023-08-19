@@ -28,7 +28,7 @@ The tasks:
 
 ## Screenhot <a id="screenshot"></a>
 
-
+![image](./public/background.jpg)
 
 ## Technolgies <a id="technolgies"></a>
 
